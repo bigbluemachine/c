@@ -1,0 +1,105 @@
+light
+	pos  -2.0   5.0   0.0
+	ia    0.0   0.0   0.0
+	id   12.0  12.0  12.0
+	is   20.0  20.0  20.0
+	att   1.0   1.5   0.0
+end
+
+light
+	pos   2.0   5.0   0.0
+	ia    0.0   0.0   0.0
+	id   12.0  12.0  12.0
+	is   20.0  20.0  20.0
+	att   1.0   1.5   0.0
+end
+
+material red
+	ka   1.0  0.0  0.0
+	kd   1.0  0.0  0.0
+	ks   1.0  1.0  1.0
+	exp  500.0
+	shd  0.0
+	ref  0.6
+end
+
+material green
+	ka   0.0  1.0  0.0
+	kd   0.0  1.0  0.0
+	ks   1.0  1.0  1.0
+	exp  500.0
+	shd  0.0
+	ref  0.6
+end
+
+material blue
+	ka   0.0  0.0  1.0
+	kd   0.0  0.0  1.0
+	ks   1.0  1.0  1.0
+	exp  500.0
+	shd  0.0
+	ref  0.6
+end
+
+material yellow
+	ka   1.0  1.0  0.0
+	kd   1.0  1.0  0.0
+	ks   1.0  1.0  1.0
+	exp  500.0
+	shd  0.0
+	ref  0.6
+end
+
+material floor
+	ka   0.3  0.3  0.3
+	kd   0.7  0.1  0.6
+	ks   0.0  0.0  0.0
+	exp  0.0
+	shd  1.0
+	ref  0.8
+end
+
+push
+	translate 0.0 1.0 3.4
+	sphere red
+pop
+
+push
+	translate 1.2 0.8 2.0
+	scale 0.8 0.8 0.8
+	sphere green
+pop
+
+push
+	translate -1.2 0.8 2.0
+	scale 0.8 0.8 0.8
+	sphere yellow
+pop
+
+push
+	translate 0.0 0.6 1.2
+	scale 0.6 0.6 0.6
+	sphere blue
+pop
+
+push
+	rotate 90.0 1.0 0.0 0.0
+	plane floor
+pop
+
+push
+	translate 0.0 3.6 -2.4
+	rotate 35.0 1.0 0.0 0.0
+	camera
+pop
+
+view
+	angle   45.0
+	aspect  1.333
+	near    0.1
+end
+
+image
+	width   800
+	height  600
+end
