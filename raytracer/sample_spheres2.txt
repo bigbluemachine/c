@@ -1,0 +1,91 @@
+light
+	pos  1 15 15
+	id   1 1 1
+	att  1 0.1 0
+end
+
+light
+	pos  15 1 15
+	id   1 1 1
+	att  1 0.1 0
+end
+
+light
+	pos  15 15 1
+	id   1 1 1
+	att  1 0.1 0
+end
+
+material w
+	kd   1 1 1
+	ref  0.8
+end
+
+material r
+	kd   1 0 0
+	ref  0.8
+end
+
+material g
+	kd   0 1 0
+	ref  0.8
+end
+
+material b
+	kd   0 0 1
+	ref  0.8
+end
+
+material floor
+	kd   1 1 1
+	shd  0.8
+end
+
+push
+	translate 1 1 1
+	sphere w
+pop
+push
+	translate 1 1 -1
+	sphere g
+pop
+push
+	translate -1 1 1
+	sphere b
+pop
+push
+	translate 0 2.41421 0
+	sphere r
+pop
+
+push
+	translate 0 0 -2
+	plane floor
+pop
+push
+	rotate -90 1 0 0
+	plane floor
+pop
+push
+	rotate 90 0 1 0
+	translate 0 0 -2
+	plane floor
+pop
+
+image
+	width   640
+	height  480
+end
+
+view
+	angle   16.0
+	aspect  1.33
+	near    10.0
+end
+
+push
+	translate 8 5 15
+	rotate -153 0 1 0
+	rotate 14 0.88 0 0.47
+	camera
+pop
