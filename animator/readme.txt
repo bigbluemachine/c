@@ -1,4 +1,7 @@
-Build:
+Note: this was originally implemented on Linux. I added the Windows stuff for
+it to compile on Windows. Also, it has a lot of bugs...
+
+Build on Windows:
 
   gcc driver.c -mwindows glut32.lib -lfreeglut -lopengl32 -lglu32 -o animator
 
